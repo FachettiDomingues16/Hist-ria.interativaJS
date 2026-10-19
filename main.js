@@ -10,12 +10,11 @@ const perguntas = [
     alternativas: [
       {
         texto: "Educação.",
-        afirmacao: "afirmacao"
+        afirmacao: "Você priorizou o futuro da cidade investindo nas escolas e na capacitação dos jovens."
       },
       {
         texto: "Saúde.",
-        afirmacao: "afirmacao"
-
+        afirmacao: "Você garantiu atendimento imediato para a população, estruturando os postos de saúde e hospitais."
       }
     ]
   },
@@ -24,11 +23,11 @@ const perguntas = [
     alternativas: [
       {
         texto: "Investir em infraestrutura.",
-        afirmacao: "afirmacao"
+        afirmacao: "Sua gestão focou em obras estruturais pesadas para renovar a rede de abastecimento e conter vazamentos."
       },
       {
         texto: "Criar campanhas de conscientização.",
-        afirmacao: "afirmacao"
+        afirmacao: "Você apostou na educação ambiental, engajando a comunidade para economizar recursos valiosos."
       }
     ]
   },
@@ -37,11 +36,11 @@ const perguntas = [
     alternativas: [
       {
         texto: "Aumentar a coleta.",
-        afirmacao: "afirmacao"
+        afirmacao: "Você resolveu a urgência de forma rápida, limpando os bairros e mantendo as ruas organizadas."
       },
       {
         texto: "Investir em reciclagem.",
-        afirmacao: "afirmacao"
+        afirmacao: "Sua decisão promoveu a economia circular, gerando empregos e reduzindo o impacto ambiental a longo prazo."
       }
     ]
   },
@@ -49,30 +48,28 @@ const perguntas = [
     enunciado: "O trânsito está piorando.",
     alternativas: [
       {
-        texto: " Melhorar o transporte público.",
-        afirmacao: "afirmacao"
+        texto: "Melhorar o transporte público.",
+        afirmacao: "Você incentivou a mobilidade urbana sustentável, oferecendo alternativas de qualidade ao uso de carros."
       },
       {
         texto: "Construir novas vias.",
-        afirmacao: "afirmacao"
+        afirmacao: "Você focou na fluidez imediata dos veículos para descongestionar as principais avenidas do município."
       }
     ]
-
   },
   {
     enunciado: "Depois de quatro anos:",
     alternativas: [
       {
-        texto: " A cidade ficou mais sustentável.",
-        afirmacao: "afirmacao"
+        texto: "A cidade ficou mais sustentável.",
+        afirmacao: "Ao término do seu mandato, a população celebra uma gestão equilibrada que transformou a cidade em um modelo ecológico."
       },
       {
         texto: "A cidade melhorou economicamente, mas ainda enfrenta problemas ambientais.",
-        afirmacao: "afirmacao"
-
+        afirmacao: "Seu mandato impulsionou o desenvolvimento e os serviços essenciais, deixando o desafio da sustentabilidade para o próximo prefeito."
       }
     ]
-  },
+  }
 ];
 
 let atual = 0;
@@ -99,8 +96,8 @@ function mostraAlternativas() {
   }
 }
 function respostaSelecionada(opcaoSelecionada) {
-  const afirmacoes = opcaoSelecionada.afirmacoes;
-  historiaFinal += afirmacoes + " ";
+  const afirmacao = opcaoSelecionada.afirmacao;
+  historiaFinal += afirmacao + " ";
   atual++;
   mostraPergunta();
 }
