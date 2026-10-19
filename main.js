@@ -80,8 +80,13 @@ let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta() {
+  if (atual>= perguntas.length) {
+    mostraResultado();
+    return;
+  }
   perguntaAtual = perguntas[atual];
   caixaPerguntas.textContent = perguntaAtual.enunciado
+  caixaAlternativas.textContent = "";
   mostraAlternativas();
 }
 
@@ -99,4 +104,13 @@ function respostaSelecionada(opcaoSelecionada) {
   atual++;
   mostraPergunta();
 }
+
+function mostraResultado(){
+  caixaPerguntas.textContent = "Em 2030 ...";
+  textoResultado.textContent = historiaFinal;
+  caixaAlternativas.textContent = ""
+}
+
+
+
 mostraPergunta();
