@@ -1,4 +1,4 @@
-const perguntas = [
+export const perguntas = [
   {
     enunciado: "A cidade tem pouco dinheiro. Onde investir primeiro?",
     alternativas: [
