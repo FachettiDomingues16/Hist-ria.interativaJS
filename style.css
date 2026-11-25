@@ -36,3 +36,10 @@ button:hover{
     color: var(--cor-principal);
     cursor: pointer;
 }
+.caixa-resultado {
+    display: none;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
